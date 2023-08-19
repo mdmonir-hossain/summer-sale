@@ -15,12 +15,14 @@
         rel="stylesheet">
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/5e38f6d791.js" crossorigin="anonymous"></script>
+    <!-- Tailwindcss color,font Customize -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'sale-primary': '#E527B2',   
+                        'sale-primary': '#E527B2',
+                        'sale-bg': '#F3F3F3',
                     }
                     ,
                     fontFamily: {
@@ -33,27 +35,122 @@
 
 </head>
 
-<body class="font-work">
+<body class="font-work bg-sale-bg">
     <header>
         <!-- Banner Section  -->
         <section>
-            <div class="flex justify-center items-center flex-col lg:flex-row md:flex-row p-10 bg-[#F9F6E2] ">
+            <div class="flex justify-center items-center flex-col lg:flex-row md:flex-row p-10 bg-[#F9F6E2]">
                 <div class="flex-1 space-y-8">
-                    <h4 class="text-3xl font-medium text-center">---SALE FEVER---</h4>
-                    <h1 class="text-6xl font-bold">Purchase TK 200 or <br> above & get <span class="text-sale-primary">20% off</span></h1>
+                    <h4 class="text-2xl font-medium text-center">---SALE FEVER---</h4>
+                    <h1 class="text-3xl lg:text-4xl md:text-4xl text-center font-bold">Purchase TK 200 or <br> above &
+                        get <span class="text-sale-primary">20% off</span></h1>
                     <div class="flex justify-center items-center space-x-3">
                         <p>Use Promo Code</p>
                         <button class="btn bg-sale-primary px-10 text-white hover:text-black ">SELL200</button>
                     </div>
                 </div>
                 <div class="flex-1">
-                    <img src="./images/Summer1.png" alt="">
+                    <img src="./images/Summer1.png" alt="" class=" w-full lg:w-3/4 md:w-3/4">
                 </div>
             </div>
         </section>
-
     </header>
-    <main class="container mx-auto">
+    <main class="mt-8">
+        <!-- Kitchenware Section  -->
+
+        <section class="container mx-auto ">
+            <h1 class="text-3xl font-bold mb-4 hidden lg:block md:block">Kitchenware</h1>
+            <div class="flex flex-col-reverse lg:flex-row md:flex-row flex-1 gap-3">
+                <div class="grid gap-2 flex-1 justify-center items-center grid-cols-1 lg:grid-cols-3 md:grid-cols-2">
+                    <div class="card  bg-base-100 shadow-xl p-4 ">
+                        <div class="bg-sale-bg rounded-xl p-4">
+                            <figure><img src="./images/prod2.png" alt="Shoes" /></figure>
+                        </div>
+                        <div class="card-body ">
+                            <div class="rating justify-center">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            </div>
+                            <h2 class="card-title justify-center">K. Accessories</h2>
+                            <h2 class="text-center text-2xl text-gray-400">39.00 TK</h2>
+
+                        </div>
+                    </div>
+                    <div class="card bg-base-100 shadow-xl p-4 ">
+                        <div class="bg-sale-bg rounded-xl p-4">
+                            <figure><img src="./images/prod3.png" alt="Shoes" /></figure>
+                        </div>
+                        <div class="card-body ">
+                            <div class="rating justify-center">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            </div>
+                            <h2 class="card-title justify-center">KA. Accessories</h2>
+                            <h2 class="text-center text-2xl text-gray-400">25.00 TK</h2>
+
+                        </div>
+                    </div>
+                    <div class="card  bg-base-100 shadow-xl p-4 ">
+                        <div class="bg-sale-bg rounded-xl p-4">
+                            <figure><img src="./images/prod1.png" alt="Shoes" /></figure>
+                        </div>
+                        <div class="card-body ">
+                            <div class="rating justify-center">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            </div>
+                            <h2 class="card-title justify-center">Home Cooker</h2>
+                            <h2 class="text-center text-2xl text-gray-400">49.00 TK</h2>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Have coupon? Section  -->
+                <div class=" space-y-2">
+                    <div class="card bg-base-100 shadow-xl p-4">
+                        <div class="card-body">
+                            <h2 class="card-title">Have coupon?</h2>
+
+                            <div class=" justify-center">
+                                <input type="text" placeholder="Coupon code"
+                                    class=" relative rounded-l-lg h-12 w-3/4 border-2 border-sale-primary" />
+                                <button
+                                    class=" absolute  p-3 rounded-r-lg px-4 bg-sale-primary text-white hover:text-black">Apply</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card  bg-base-100 shadow-xl">
+                        <div id="item-Selected" class="w-full h-40">
+                        </div>
+                        <hr>
+                        <div class="card-body">
+                            <hr>
+                            <h2 class="card-title">Total price:</h2>
+                            <h2 class="card-title">Discount :</h2>
+                            <h2 class="card-title">Total:</h2>
+                            <hr>
+                            <button class="btn w-full bg-[#E527B2] text-white hover:text-black">Make Purchase</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kitchenware responsive fix title  -->
+                <h1 class="text-3xl font-bold mb-4  lg:hidden md:hidden">Kitchenware</h1>
+            </div>
+
+            </div>
+
+        </section>
 
     </main>
     <footer>
