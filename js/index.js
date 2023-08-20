@@ -28,11 +28,12 @@ function productCalculation(target) {
     if (totalSum >= 200) {
         applyBtn.removeAttribute("disabled");
         couponApply.removeAttribute("disabled");
+        
     } else {
         applyBtn.setAttribute("disabled", true);
         couponApply.setAttribute("disabled", true);
     }
-   
+    
     // Discount  
      
     const discountShow = document.getElementById("discount-id");
@@ -42,15 +43,14 @@ function productCalculation(target) {
         const discount = (couponDis / 100) * totalSum;
             discountShow.innerText = discount.toFixed(2);
             const grandTotalCal = totalSum - discount;
-            grandTotal.innerText = grandTotalCal.toFixed(2);
-           
+            grandTotal.innerText = grandTotalCal.toFixed(2); 
             
         } else {
             const discountShow = document.getElementById("discount-id");
             discountShow.innerText = "Wrong😥";
             disocuntTextHide.innerText = "";   
             grandTotal.innerText = totalSum.toFixed(2);
-            
+               
     }
     })
 
@@ -66,6 +66,7 @@ function productCalculation(target) {
         makePurchaseBtn.setAttribute("disabled", true);
         applyBtn.setAttribute("disabled", true);
         couponApply.setAttribute("disabled", true);
+        document.location.href="/";
         
     })
     
