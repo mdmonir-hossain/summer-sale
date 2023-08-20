@@ -33,24 +33,22 @@ function productCalculation(target) {
         couponApply.setAttribute("disabled", true);
     }
    
-    // coupon code  
+    // Discount  
      
     const discountShow = document.getElementById("discount-id");
     const couponDis = 20;
     applyBtn.addEventListener('click', function () {
         if(couponApply.value === "SELL200"){
         const discount = (couponDis / 100) * totalSum;
-            discountShow.innerText = discount.toFixed(2) + " TK";
+            discountShow.innerText = discount.toFixed(2);
             const grandTotalCal = totalSum - discount;
             grandTotal.innerText = grandTotalCal.toFixed(2);
            
             
         } else {
             const discountShow = document.getElementById("discount-id");
-            const disocuntTextHide = document.getElementById("disocunt-Text-Hide");
-            discountShow.innerText = "Wrong 😥";
-            disocuntTextHide.innerText = "";
-            
+            discountShow.innerText = "Wrong😥";
+            disocuntTextHide.innerText = "";   
             grandTotal.innerText = totalSum.toFixed(2);
             
     }
