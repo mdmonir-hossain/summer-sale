@@ -59,9 +59,112 @@
         <!-- Kitchenware Section  -->
 
         <section class="container mx-auto ">
-            <h1 class="text-3xl font-bold mb-4 hidden lg:block md:block">Kitchenware</h1>
+            <h1 class="text-3xl font-bold  hidden lg:block md:block">Kitchenware</h1>
             <div class="flex flex-col-reverse lg:flex-row md:flex-row flex-1 gap-3">
-                <div class="grid gap-2 flex-1 justify-center items-center grid-cols-1 lg:grid-cols-3 md:grid-cols-2">
+                <div
+                    class="grid gap-2 flex-1 justify-center items-center grid-cols-1 lg:grid-cols-3 md:grid-cols-2 h-[300px]">
+                    <div onclick="productCalculation(this)" class="card  bg-base-100 shadow-xl p-4 ">
+                        <div class="bg-sale-bg rounded-xl p-4">
+                            <figure><img src="./images/prod2.png" alt="Shoes" /></figure>
+                        </div>
+                        <div class="card-body ">
+                            <div class="rating justify-center">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            </div>
+                            <h2 class="card-title justify-center">K. Accessories</h2>
+                            <h2 class="text-center text-2xl text-gray-400"><span>39.00</span> TK</h2>
+
+                        </div>
+                    </div>
+                    <div onclick="productCalculation(this)" class="card bg-base-100 shadow-xl p-4 ">
+                        <div class="bg-sale-bg rounded-xl p-4">
+                            <figure><img src="./images/prod3.png" alt="Shoes" /></figure>
+                        </div>
+                        <div class="card-body ">
+                            <div class="rating justify-center">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            </div>
+                            <h2 class="card-title justify-center">KA. Accessories</h2>
+                            <h2 class="text-center text-2xl text-gray-400"><span>25.00</span> TK</h2>
+
+                        </div>
+                    </div>
+                    <div onclick="productCalculation(this)" class="card  bg-base-100 shadow-xl p-4 ">
+                        <div class="bg-sale-bg rounded-xl p-4">
+                            <figure><img src="./images/prod1.png" alt="Shoes" /></figure>
+                        </div>
+                        <div class="card-body ">
+                            <div class="rating justify-center">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            </div>
+                            <h2 class="card-title justify-center">Home Cooker</h2>
+                            <h2 class="text-center text-2xl text-gray-400"> <span>49.00</span> TK</h2>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Have coupon? Section  -->
+                <div class=" space-y-2">
+                    <div class="card bg-base-100 shadow-xl p-4">
+                        <div class="card-body">
+                            <h2 class="card-title">Have coupon?</h2>
+
+                            <div class=" justify-center">
+                                <input type="text" placeholder="Coupon code"
+                                    class=" relative rounded-l-lg h-12 w-3/4 border-2 border-sale-primary" />
+                                <button disabled
+                                    class=" btn absolute  p-3 rounded-r-lg px-4 bg-sale-primary text-white hover:text-black">Apply</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card  bg-base-100 shadow-xl">
+                        <hr>
+                        <div class="w-full h-40 font-bold flex justify-center items-center">
+                            <ul id="item-Selected-id">
+
+                            </ul>
+                        </div>
+                        <hr>
+                        <div class="card-body">
+                            
+                            <h2 class="card-title">Total price: <span id="total-price-id">00</span></h2>
+                            <h2 class="card-title">Discount : <span id="discount-id">00</span></h2>
+                            <h2 class="card-title">Total: <span id="total-id">00</span></h2>
+                            <hr>
+                            <button class="btn w-full bg-[#E527B2] text-white hover:text-black" disabled>Make
+                                Purchase</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kitchenware responsive fix title  -->
+                <h1 class="text-3xl font-bold mb-4  lg:hidden md:hidden">Kitchenware</h1>
+            </div>
+
+            </div>
+
+        </section>
+
+        <!-- Sportswear Section  -->
+
+        <section class="container mx-auto  mt-0 lg:-mt-40">
+            <h1 class="text-3xl font-bold  hidden lg:block md:block">Kitchenware</h1>
+            <div class="flex flex-col-reverse lg:flex-row md:flex-row  gap-3">
+                <div
+                    class="grid gap-2 w-3/4 justify-center items-center grid-cols-1 lg:grid-cols-3 md:grid-cols-2 h-[300px]">
                     <div class="card  bg-base-100 shadow-xl p-4 ">
                         <div class="bg-sale-bg rounded-xl p-4">
                             <figure><img src="./images/prod2.png" alt="Shoes" /></figure>
@@ -115,42 +218,80 @@
                     </div>
                 </div>
 
-                <!-- Have coupon? Section  -->
-                <div class=" space-y-2">
-                    <div class="card bg-base-100 shadow-xl p-4">
-                        <div class="card-body">
-                            <h2 class="card-title">Have coupon?</h2>
-
-                            <div class=" justify-center">
-                                <input type="text" placeholder="Coupon code"
-                                    class=" relative rounded-l-lg h-12 w-3/4 border-2 border-sale-primary" />
-                                <button
-                                    class=" absolute  p-3 rounded-r-lg px-4 bg-sale-primary text-white hover:text-black">Apply</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card  bg-base-100 shadow-xl">
-                        <div id="item-Selected" class="w-full h-40">
-                        </div>
-                        <hr>
-                        <div class="card-body">
-                            <hr>
-                            <h2 class="card-title">Total price:</h2>
-                            <h2 class="card-title">Discount :</h2>
-                            <h2 class="card-title">Total:</h2>
-                            <hr>
-                            <button class="btn w-full bg-[#E527B2] text-white hover:text-black">Make Purchase</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Kitchenware responsive fix title  -->
-                <h1 class="text-3xl font-bold mb-4  lg:hidden md:hidden">Kitchenware</h1>
             </div>
 
             </div>
 
         </section>
+
+
+        <!-- Sportswear Section  -->
+
+        <section class="container mx-auto ">
+            <h1 class="text-3xl font-bold mb-4 hidden lg:block md:block">Kitchenware</h1>
+            <div class="flex flex-col-reverse lg:flex-row md:flex-row  gap-3">
+                <div
+                    class="grid gap-2 w-3/4 justify-center items-center grid-cols-1 lg:grid-cols-3 md:grid-cols-2 h-[300px]">
+                    <div id="product-one-id" onclick="productCalculation(this)"
+                        class="card  bg-base-100 shadow-xl p-4 ">
+                        <div class="bg-sale-bg rounded-xl p-4">
+                            <figure><img src="./images/prod2.png" alt="Shoes" /></figure>
+                        </div>
+                        <div class="card-body ">
+                            <div class="rating justify-center">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            </div>
+                            <h2 class="card-title justify-center">K. Accessories</h2>
+                            <h2 class="text-center text-2xl text-gray-400">39.00 TK</h2>
+
+                        </div>
+                    </div>
+                    <div class="card bg-base-100 shadow-xl p-4 ">
+                        <div class="bg-sale-bg rounded-xl p-4">
+                            <figure><img src="./images/prod3.png" alt="Shoes" /></figure>
+                        </div>
+                        <div class="card-body ">
+                            <div class="rating justify-center">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            </div>
+                            <h2 class="card-title justify-center">KA. Accessories</h2>
+                            <h2 class="text-center text-2xl text-gray-400">25.00 TK</h2>
+
+                        </div>
+                    </div>
+                    <div class="card  bg-base-100 shadow-xl p-4 ">
+                        <div class="bg-sale-bg rounded-xl p-4">
+                            <figure><img src="./images/prod1.png" alt="Shoes" /></figure>
+                        </div>
+                        <div class="card-body ">
+                            <div class="rating justify-center">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            </div>
+                            <h2 class="card-title justify-center">Home Cooker</h2>
+                            <h2 class="text-center text-2xl text-gray-400">49.00 TK</h2>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            </div>
+
+        </section>
+
 
     </main>
     <footer>
